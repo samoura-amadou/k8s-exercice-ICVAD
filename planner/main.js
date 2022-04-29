@@ -30,15 +30,9 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
   const { url } = req.body
-  if (workers.includes(url)) {
-    const msg = `${url} already exist`
-    console.error(msg)
-    res.status(403).send(msg)
-  } else {
-    console.log(`adding ${url} worker`)
-    workers.push(url)
-    res.send('ok')
-  }
+  console.log(`adding ${url} worker`)
+  workers.push(url)
+  res.send('ok')
 })
 
 let tasks = generateTasks(nbTasks)
