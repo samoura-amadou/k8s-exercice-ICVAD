@@ -12,7 +12,9 @@ const args = () => ({ a: randInt(0, 40), b: randInt(0, 40) })
 const generateTasks = (i) =>
   new Array(i).fill(1).map((_) => ({ type: taskType(), args: args() }))
 
-let workers = ['http://localhost:8080']
+let workers = [
+  //'http://localhost:8080'
+]
 
 const app = express()
 app.use(express.json())
@@ -80,10 +82,10 @@ const main = async () => {
     sendTask(workers[0], tasks[0])
   }
   console.log('end of tasks')
-  app.close()
+  server.close()
 }
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Register listening at http://localhost:${port}`)
   console.log('starting tasks...')
   main()
