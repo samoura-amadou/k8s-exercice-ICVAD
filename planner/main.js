@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
   const { url } = req.body
-  console.log(`adding ${url} worker`)
+  console.log(`Register: adding ${url} worker`)
   workers.push(url)
   res.send('ok')
 })
@@ -42,7 +42,7 @@ const wait = (mili) =>
   new Promise((resolve, reject) => setTimeout(resolve, mili))
 
 const sendTask = async (worker, task) => {
-  console.log(`${worker}/${task.type}`, task)
+  console.log(`=> ${worker}/${task.type}`, task)
   workers = workers.filter((w) => w !== worker)
   tasks = tasks.filter((t) => t !== task)
   const request = fetch(`${worker}/${task.type}`, {
@@ -59,11 +59,14 @@ const sendTask = async (worker, task) => {
     })
     .then((res) => {
       taskToDo -= 1
+      console.log('---')
+      console.log(nbTasks - taskToDo, '/', nbTasks, ':')
       console.log(task, 'has res', res)
+      console.log('---')
       return res
     })
     .catch((err) => {
-      console.log(task, ' failed')
+      console.error(task, ' failed')
       tasks = [...tasks, task]
     })
 }
