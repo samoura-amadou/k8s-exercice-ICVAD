@@ -1,8 +1,4 @@
-# Evaluation: workers
-
-Le rendu de l'exercice se fera via git. Pensez bien à commit à chaque fin d'exercice.
-Vous pouvez utiliser tous les outils que vous voulez pendant l'évalutions.
-Elle se fera surtout sur l'utilisation de docker et docker-compose.
+# Workers
 
 ## Présentation
 
@@ -32,7 +28,7 @@ On commit!
 
 ### Exercice 2: Plusieurs workers
 
-On veut pouvoir lancer plusieurs workers pour un seul planner pour pralléliser et accélérer l'exécution.
+On veut pouvoir lancer plusieurs workers pour un seul planner pour parallèliser et accélérer l'exécution.
 Pour ça il vous faudra modifier le code du planner (la ligne 12) :
 
 ```js
@@ -58,7 +54,7 @@ On commit!
 On repasse avec des workers généraliste.
 On veut maintenant pouvoir ajouter un nombre dynamique de worker pendant l'exécution du planner.
 
-Les nouveaux workers fraichement lancés doivent s'enregistrer auprés du planner pour pouvoir reçevoir des tâches.
+Les nouveaux workers fraichement lancés doivent s'enregistrer auprès du planner pour pouvoir recevoir des tâches.
 
 Trouvez un moyen de lancer un planner et une dizaine de workers pour exécuter rapidement une cinquantaine de tâches en une seule commande.
 
