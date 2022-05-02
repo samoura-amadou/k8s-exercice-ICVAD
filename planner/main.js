@@ -13,7 +13,7 @@ const generateTasks = (i) =>
   new Array(i).fill(1).map((_) => ({ type: taskType(), args: args() }))
 
 let workers = [
-  //'http://localhost:8080'
+  // { url: 'http://localhost:8080', id: '' }
 ]
 
 const app = express()
@@ -29,9 +29,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-  const { url } = req.body
-  console.log(`Register: adding ${url} worker`)
-  workers.push(url)
+  const { url, id } = req.body
+  console.log(`Register: adding ${url} worker: ${id}`)
+  workers.push({ url, id })
   res.send('ok')
 })
 
@@ -42,10 +42,10 @@ const wait = (mili) =>
   new Promise((resolve, reject) => setTimeout(resolve, mili))
 
 const sendTask = async (worker, task) => {
-  console.log(`=> ${worker}/${task.type}`, task)
-  workers = workers.filter((w) => w !== worker)
+  console.log(`=> ${worker.url}/${task.type}`, task)
+  workers = workers.filter((w) => w.id !== worker.id)
   tasks = tasks.filter((t) => t !== task)
-  const request = fetch(`${worker}/${task.type}`, {
+  const request = fetch(`${worker.url}/${task.type}`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -66,7 +66,7 @@ const sendTask = async (worker, task) => {
       return res
     })
     .catch((err) => {
-      console.error(task, ' failed')
+      console.error(task, ' failed', err.message)
       tasks = [...tasks, task]
     })
 }
