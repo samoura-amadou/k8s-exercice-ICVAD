@@ -23,3 +23,9 @@ npm install
 ```bash
 node main
 ```
+
+Add new worker
+
+```sh
+curl -X POST localhost:3000/register  -H "Content-Type: application/json"  -d '{"url": "http://localhost:8080"}'
+```
