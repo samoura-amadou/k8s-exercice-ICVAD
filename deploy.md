@@ -2,6 +2,7 @@ Before build in a terminal
 
 ```sh
 eval $(minikube -p minikube docker-env)
+minikube addons enable registry
 ```
 
 Start a local registry
