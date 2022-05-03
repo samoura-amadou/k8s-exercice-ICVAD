@@ -4,6 +4,7 @@ metadata:
   name: worker
   labels:
     purpose: work
+    app: work
 spec:
   containers:
     - name: worker
