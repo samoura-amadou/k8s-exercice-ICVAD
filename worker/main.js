@@ -17,6 +17,15 @@ const ADDRESS =
     ? process.env.ADDRESS
     : 'http://localhost:' + port
 const randInt = (min, max) => Math.floor(Math.random() * (max - min)) + min
+const register = () =>
+  fetch(PLANNER + '/register', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ url: ADDRESS, id }),
+  })
 let mult = false
 let add = false
 let task = {}
@@ -76,13 +85,6 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  fetch(PLANNER + '/register', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ url: ADDRESS, id }),
-  })
+  // register()
   console.log(`Worker ${id} listening at http://localhost:${port}`)
 })
