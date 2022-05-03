@@ -1,5 +1,5 @@
 FROM node:alpine
-RUN yarn
 COPY . .
+RUN yarn
 EXPOSE 8080
 CMD node main.js
