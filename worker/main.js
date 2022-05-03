@@ -81,7 +81,7 @@ app.get('/', (req, res) => {
     res.send(JSON.stringify({ type: 'add', task, id }))
     return
   }
-  res.send('ready to work', id)
+  res.send('ready to work ' + id)
 })
 
 app.listen(port, () => {
