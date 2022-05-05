@@ -1,8 +1,19 @@
+```sh
+minikube addons enable registry
+```
+
 Before build in a terminal
+
+For linux
 
 ```sh
 eval $(minikube -p minikube docker-env)
-minikube addons enable registry
+```
+
+For windows
+
+```sh
+@FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
 ```
 
 Start a local registry
