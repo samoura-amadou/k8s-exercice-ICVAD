@@ -1,4 +1,8 @@
+At least one time
+
 ```sh
+minikube start
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
 minikube addons enable registry
 ```
 
@@ -17,10 +21,6 @@ For windows
 ```
 
 Start a local registry
-
-```sh
-docker run -d -p 5000:5000 --restart=always --name registry registry:2
-```
 
 ```sh
 docker build ...
