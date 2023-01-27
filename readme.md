@@ -121,6 +121,6 @@ docker-compose up
 
 #### Additionnaly you can use those official cheat sheets :
 
-- <a href="https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf"> Docker</a>
+- <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/"> Docker</a>
 
 - <a href="https://devhints.io/docker-compose"> Docker-compose</a>
