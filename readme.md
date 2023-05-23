@@ -9,6 +9,8 @@ Prérequis pour ces exercices :
 
 Vérifier que tout fonctionne correctement : https://kubernetes.io/docs/tutorials/hello-minikube/
 
+- Lire deploy.md
+
 ## Présentation
 
 L'objectif du code fourni est de simuler un pattern <a href="https://en.wikipedia.org/wiki/Master/slave_(technology)">master/slave</a>.
