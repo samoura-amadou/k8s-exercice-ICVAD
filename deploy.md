@@ -30,8 +30,20 @@ docker push localhost:5000/{name}
 
 Use yaml file
 
+To create
+
 ```sh
 kubectl create -f file.yaml
-kubectl delete -f file.yaml
+```
+
+When you modify the file to apply de change
+
+```sh
 kubectl apply -f file.yaml
+```
+
+To delete everything that the file has created
+
+```sh
+kubectl delete -f file.yaml
 ```
