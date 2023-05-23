@@ -8,7 +8,7 @@ minikube addons enable registry
 
 Before build in a terminal
 
-For linux
+For linux/mac
 
 ```sh
 eval $(minikube -p minikube docker-env)
