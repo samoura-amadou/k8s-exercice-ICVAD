@@ -130,8 +130,10 @@ build and run a docker-compose stack (You have to run it in folder with a docker
 docker-compose up
 ```
 
-#### Additionnaly you can use those official cheat sheets :
+#### Additionnaly you can use those cheat sheets :
 
 - <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/"> Docker</a>
 
 - <a href="https://devhints.io/docker-compose"> Docker-compose</a>
+
+- <a href="https://dev.to/ssmak/cheatsheet-for-kubernetes-minikube-kubectl-1i96"> K8S</a>
