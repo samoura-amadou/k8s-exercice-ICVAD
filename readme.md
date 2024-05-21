@@ -9,7 +9,7 @@ Prérequis pour ces exercices :
 
 Vérifier que tout fonctionne correctement : https://kubernetes.io/docs/tutorials/hello-minikube/
 
-- Lire deploy.md
+- <a href="https://github.com/arthurescriou/k8s-exercice/blob/master/deploy.md">Lire deploy.md</a>
 
 ## Présentation
 
