@@ -58,6 +58,8 @@ Pour ça il vous faudra modifier le code du planner (la ligne 12) :
 let workers = ['http://localhost:8080']
 ```
 
+Et créer un deployment capable de gérer plusieurs pods.
+
 Pour qu'il dispatche les tâches à chaque workers.
 
 On commit!
