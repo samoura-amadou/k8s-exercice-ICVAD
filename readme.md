@@ -29,11 +29,23 @@ Les workers ne peuvent pas effectuer plusieurs tâches à la fois, ils renvoient
 
 Pour configurer plus facilement les serveurs il est possible d'utiliser les variables d'environment. (voir directement dans les readme des deux projets)
 
+### Kubernetes
+
+On veut utiliser Kubernetes pour lancer les différents éléments du projet. 
+Pour ça on va avoir besoin de créer différents types d'objects :
+- pod
+- deployment
+- service
+
+Vous pouvez trouver des exemples de fichiers de configurations dans les différents dossier du projet (`service.yml`, `pod.yml`, `deployment.yml`).
+
+A vous de les utiliser (`kubectl create/apply/delete -f file.yml`) et de les modifier pour faire les exercices.
+
 ## Exercices
 
-### Exercice 1: Dockeriser les Serveurs
+### Exercice 1: Déployer un pod
 
-Première étape lancer une exécution de 4 tâches avec un planner et un worker dans des container docker.
+Première étape lancer une exécution de 4 tâches avec un planner et un worker dans pod.
 
 On commit!
 
