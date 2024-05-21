@@ -13,7 +13,7 @@ Vérifier que tout fonctionne correctement : https://kubernetes.io/docs/tutorial
 
 ## Présentation
 
-L'objectif du code fourni est de simuler un pattern <a href="https://en.wikipedia.org/wiki/Master/slave_(technology)">master/slave</a>.
+L'objectif du code fourni est de simuler un pattern <a href="https://en.wikipedia.org/wiki/Master/slave_(technology)">controller/agent</a>.
 
 On a donc 2 serveurs :
 
