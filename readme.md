@@ -5,7 +5,7 @@
 Prérequis pour ces exercices :
 
 - minikube : https://kubernetes.io/fr/docs/tasks/tools/install-minikube/
-- kubectl :https://kubernetes.io/docs/tasks/tools/
+- kubectl : https://kubernetes.io/docs/tasks/tools/
 
 Vérifier que tout fonctionne correctement : https://kubernetes.io/docs/tutorials/hello-minikube/
 
