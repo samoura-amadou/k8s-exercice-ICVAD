@@ -101,3 +101,4 @@ Pensez à m'envoyer un lien vers votre git sur slack ou par mail: arthur.escriou
 ### Additionnaly you can use this cheat sheets :
 
 - <a href="https://dev.to/ssmak/cheatsheet-for-kubernetes-minikube-kubectl-1i96"> K8S</a>
+# k8s-exercice-ICVAD
