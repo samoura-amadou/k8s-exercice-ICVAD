@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker
+spec:
+  containers:
+  - name: worker
+    image: almadsam/worker:latest
+    imagePullPolicy: Always
+    env:
+    - name: WORKER_TYPE
+      value: "general"
+    ports:
+    - containerPort: 8080
