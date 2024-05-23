@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker-addition
+spec:
+  containers:
+  - name: worker
+    image: almadsam/worker:latest
+    env:
+    - name: WORKER_TYPE
+      value: "addition"
+    - name: PLANNER
+      value: "http://planner:3000"  
+    - name: PORT
+      value: "8080"
