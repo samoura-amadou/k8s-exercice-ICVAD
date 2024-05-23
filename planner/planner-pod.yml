@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: planner
+  labels:
+    app: planner
+spec:
+  containers:
+  - name: planner
+    image: almadsam/planner
+    ports:
+    - containerPort: 3000
+    env:
+    - name: TASKS
+      value: "4"
