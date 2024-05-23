@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multiplication-worker-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: worker
+      type: multiplication
+  template:
+    metadata:
+      labels:
+        app: worker
+        type: multiplication
+    spec:
+      containers:
+      - name: worker
+        image: almadsam/worker:latest 
+        env:
+        - name: WORKER_TYPE
+          value: "multiplication"
+        ports:
+        - containerPort: 8080

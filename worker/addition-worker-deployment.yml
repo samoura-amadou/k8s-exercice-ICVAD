@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: addition-worker-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: worker
+      type: addition
+  template:
+    metadata:
+      labels:
+        app: worker
+        type: addition
+    spec:
+      containers:
+      - name: worker
+        image: almadsam/worker:latest  
+        env:
+        - name: WORKER_TYPE
+          value: "addition"
+        ports:
+        - containerPort: 8080
